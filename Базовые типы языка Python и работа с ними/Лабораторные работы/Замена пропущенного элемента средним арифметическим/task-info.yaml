@@ -1,0 +1,44 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 102
+    length: 103
+    placeholder_text: |-
+      # TODO заменить значение пропущенного элемента средним арифметическим
+
+      print("Измененный список:", ...)
+    initial_state:
+      length: 103
+      offset: 102
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
+      index_missing_item = 4
+
+      sum_of_numbers = sum(numbers[:index_missing_item]) + sum(numbers[index_missing_item+1:])
+      count_of_numbers = len(numbers)
+      average_of_numbers = sum_of_numbers / count_of_numbers
+
+      numbers[index_missing_item] = average_of_numbers
+      print("Измененный список:", numbers)
+  text: |
+    numbers = [2, -93, -2, 8, None, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
+
+    # TODO заменить значение пропущенного элемента средним арифметическим
+
+    print("Измененный список:", ...)
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    Измененный список: [2, -93, -2, 8, -15.65, -44, -1, -85, -14, 90, -22, -90, -100, -8, 38, -92, -45, 67, 53, 25]
+  learner_created: false
+status: Solved
+record: -1
+solution_hidden: true
