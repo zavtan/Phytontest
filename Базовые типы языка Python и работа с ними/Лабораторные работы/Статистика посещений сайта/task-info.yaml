@@ -1,0 +1,42 @@
+type: output
+files:
+- name: main.py
+  visible: true
+  placeholders:
+  - offset: 64
+    length: 79
+    placeholder_text: '# TODO Добавьте словарь и замените в нем нулевые значения статисчикой
+      посещений'
+    initial_state:
+      length: 79
+      offset: 64
+    initialized_from_dependency: false
+    selected: false
+    status: Solved
+    encrypted_possible_answer: |-
+      # Инициализация словаря статистики
+      stat = {
+          "Общее количество": 0,
+          "Уникальные посещения": 0
+      }
+
+      stat["Общее количество"] = len(users)
+      stat["Уникальные посещения"] = len(set(users))
+
+      print(stat)
+  text: |
+    users = ['user1', 'user2', 'user3', 'user1', 'user4', 'user2']
+
+    # TODO Добавьте словарь и замените в нем нулевые значения статисчикой посещений
+  learner_created: false
+- name: __init__.py
+  visible: false
+  learner_created: false
+- name: tests/output.txt
+  visible: false
+  text: |
+    {'Общее количество': 6, 'Уникальные посещения': 4}
+  learner_created: false
+status: Solved
+record: -1
+solution_hidden: true
